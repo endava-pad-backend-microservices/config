@@ -27,7 +27,7 @@
             </snapshots>
         </repository>
     </repositories>
-
+ 
     <properties>
         <java.version>12</java.version>
         <spring-cloud.version>Greenwich.SR1</spring-cloud.version>
@@ -64,6 +64,10 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+        	<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+		</dependency>
     </dependencies>
 
     <dependencyManagement>
