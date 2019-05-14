@@ -1,9 +1,9 @@
-FROM maven:3.6.1-jdk-12 AS Builder
+FROM maven:3.6.1-jdk-12 AS builder
 COPY ./ .
-CMD mvn clean package
+RUN mvn clean package
 
 FROM openjdk:12 as Target
-COPY --from=Builder target/config-1.0.0.jar config.jar
+COPY --from=builder target/config-1.0.0.jar config.jar
 
 ENV MONGO_URL=pad-b-config-database \
 EUREKA_URL=pad-b-registry \
