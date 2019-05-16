@@ -1,0 +1,11 @@
+{
+  "label": "configuration",
+  "profile": "dev",
+  "version": "1.0.2",
+  "source": {
+    "user": {
+      "maxConnections": 222,
+      "timeoutMs": 0
+    }
+  }
+}
