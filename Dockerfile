@@ -1,9 +1,12 @@
 FROM maven:3.6.1-jdk-12 AS builder
-COPY ./ .
-RUN mvn clean package
+WORKDIR /build
+COPY pom.xml .
+RUN mvn dependency:go-offline
+COPY src/ /build/src/
+RUN mvn package
 
 FROM openjdk:12 as Target
-COPY --from=builder target/config-1.0.0.jar config.jar
+COPY --from=builder /build/target/config-1.0.0.jar config.jar
 
 ENV MONGO_URL=pad-b-config-database \
 EUREKA_URL=pad-b-registry \
