@@ -29,6 +29,7 @@ import com.endava.config.repository.RegistryRepository;
 import com.endava.config.repository.UsersRepository;
 
 import lombok.extern.log4j.Log4j2;
+import springfox.documentation.builders.PathSelectors;
 import springfox.documentation.builders.RequestHandlerSelectors;
 import springfox.documentation.spi.DocumentationType;
 import springfox.documentation.spring.web.plugins.Docket;
@@ -122,6 +123,7 @@ public class ConfigApplication implements CommandLineRunner {
 				File file = new File(uri.toURL().getPath());
 				FileUtils.copyInputStreamToFile(inputStream, file);
 				return file;
+				
 			}
 		}
 	}
@@ -132,7 +134,8 @@ public class ConfigApplication implements CommandLineRunner {
 		@Bean
 		public Docket authAPI() {
 			return new Docket(DocumentationType.SWAGGER_2).select()
-					.apis(RequestHandlerSelectors.basePackage("com.endava.*")).build();
+					.apis(RequestHandlerSelectors.basePackage("*"))
+					.paths(PathSelectors.any()).build();
 		}
 	}
 
