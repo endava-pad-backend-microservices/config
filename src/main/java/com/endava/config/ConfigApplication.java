@@ -65,21 +65,6 @@ public class ConfigApplication implements CommandLineRunner {
 
 	private void initializeConfigs() throws IOException, ParseException, URISyntaxException {
 		for (Profile profile : Profile.values()) {
-			int size = -1;
-			switch (profile) {
-			case PROD:
-				size = prodRepository.findAll().size();
-				break;
-			case QA:
-				size = qaRepository.findAll().size();
-				break;
-			case DEV:
-				size = devRepository.findAll().size();
-				break;
-			default:
-				break;
-			}
-
 				log.debug(String.format("Attempting to insert configs for service %s", profile));
 				FileReader reader = new FileReader(getFileFromResources(getConfigFilePath(profile)));
 				JSONParser jsonParser = new JSONParser();
@@ -88,7 +73,6 @@ public class ConfigApplication implements CommandLineRunner {
 				mongoTemplate.dropCollection(profile.toString().toLowerCase());
 				mongoTemplate.save(JSONString, profile.toString().toLowerCase());
 		}
-
 	}
 
 	private String getConfigFilePath(Profile profile) {
