@@ -22,9 +22,6 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.data.mongodb.core.MongoTemplate;
 
 import com.endava.config.annotation.EnableMongoConfigServer;
-import com.endava.config.repository.DevRepository;
-import com.endava.config.repository.ProdRepository;
-import com.endava.config.repository.QARepository;
 
 import lombok.extern.log4j.Log4j2;
 import springfox.documentation.builders.PathSelectors;
@@ -41,16 +38,6 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @Log4j2
 @ComponentScan({ "com.endava.config.repository" })
 public class ConfigApplication implements CommandLineRunner {
-
-	@Autowired
-	private DevRepository devRepository;
-
-	@Autowired
-	private QARepository qaRepository;
-
-	@Autowired
-	private ProdRepository prodRepository;
-
 	@Autowired
 	private MongoTemplate mongoTemplate;
 
