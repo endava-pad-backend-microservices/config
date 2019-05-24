@@ -1,6 +1,5 @@
 package com.endava.config.entity.serviceEntity;
 
-import org.json.simple.JSONObject;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import com.endava.config.ConfigConstants.ConfigConstants;

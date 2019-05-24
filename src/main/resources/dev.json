@@ -8,7 +8,7 @@
 		},
 		"gateway": {
 			"name":"GATEWAY",
-			"exclude-swagger-services":"CONFIG" 
+			"exclude-swagger-services":"GATEWAY,CONFIG" 
 	    },
 		"registry": {
 			"name":"REGISTRY"
