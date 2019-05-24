@@ -1,0 +1,23 @@
+{
+	"label": "configuration",
+	"profile": "dev",
+	"version": "1.0.2",
+	"source": {
+		"globals": {
+			
+		},
+		"gateway": {
+			"name":"GATEWAY",
+			"exclude-swagger-services":"CONFIG" 
+	    },
+		"registry": {
+			"name":"REGISTRY"
+		},
+		"auth": { 
+			"name":"AUTH"
+		},
+		"users": { 
+			"name":"USERS"
+		}
+	}
+}
