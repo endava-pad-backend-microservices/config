@@ -1,0 +1,22 @@
+{
+	"label": "configuration",
+	"profile": "qa",
+	"version": "1.0.2",
+	"source": {
+		"globals": {
+			
+		},
+		"gateway": {
+			"name":"GATEWAY"
+		},
+		"registry": {
+			"name":"REGISTRY"
+		},
+		"auth": {
+			"name":"AUTH"
+		},
+		"users": {
+			"name":"USERS"
+		}
+	}
+}
