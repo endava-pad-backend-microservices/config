@@ -17,7 +17,8 @@
 			"name":"AUTH"
 		},
 		"users": { 
-			"name":"USERS"
+			"name":"USERS",
+			"bcrypt-hash-size": 10
 		}
 	}
 }
