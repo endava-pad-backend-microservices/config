@@ -4,7 +4,7 @@
 	"version": "1.0.2",
 	"source": {
 		"globals": {
-			
+			"refreshServices":"GATEWAY,AUTH"
 		},
 		"gateway": {
 			"name":"GATEWAY",
@@ -14,8 +14,9 @@
 			"name":"REGISTRY"
 		},
 		"auth": { 
-			"name":"AUTH"
-		},
+			"name":"AUTH",
+			"endpoints":"/auth/signin, /refresh"
+        },
 		"users": { 
 			"name":"USERS",
 			"bcrypt-hash-size": 10
