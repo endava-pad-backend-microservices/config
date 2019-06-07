@@ -10,7 +10,7 @@ FROM openjdk:12 as Target
 ENV MONGO_URL=pad-b-config-database \
 EUREKA_URL=pad-b-registry \ 
 SERVER_URL=pad-b-config \
-MONGO_DB=admin \
+MONGO_DB=admin \ 
 MONGO_USER=admin \
 MONGO_PASSWORD=123456 \
 DOCKERIZE_VERSION=v0.6.0 \
