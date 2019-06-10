@@ -4,21 +4,22 @@
 	"version": "1.0.2",
 	"source": {
 		"globals": {
-			"refreshServices":"GATEWAY,AUTH"
+			"refreshServices": "GATEWAY,AUTH"
 		},
 		"gateway": {
-			"name":"GATEWAY",
-			"exclude-swagger-services":"GATEWAY,CONFIG" 
-	    },
-		"registry": {
-			"name":"REGISTRY"
+			"name": "GATEWAY",
+			"exclude-swagger-services": "GATEWAY,CONFIG",
+			"audit_unsave_endpoints": "audit,api-docs,error,swagger.json"
 		},
-		"auth": { 
-			"name":"AUTH",
-			"endpoints":"/auth/signin, /refresh"
-        },
-		"users": { 
-			"name":"USERS",
+		"registry": {
+			"name": "REGISTRY"
+		},
+		"auth": {
+			"name": "AUTH",
+			"endpoints": "/auth/signin, /refresh"
+		},
+		"users": {
+			"name": "USERS",
 			"bcrypt-hash-size": 10
 		}
 	}

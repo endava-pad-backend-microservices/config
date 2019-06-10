@@ -7,6 +7,11 @@ import java.io.InputStream;
 import java.net.MalformedURLException;
 import java.net.URISyntaxException;
 
+import com.endava.config.annotation.EnableMongoConfigServer;
+import com.endava.config.repository.DevRepository;
+import com.endava.config.repository.ProdRepository;
+import com.endava.config.repository.QARepository;
+
 import org.apache.commons.io.FileUtils;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
@@ -20,11 +25,6 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.mongodb.core.MongoTemplate;
-
-import com.endava.config.annotation.EnableMongoConfigServer;
-import com.endava.config.repository.DevRepository;
-import com.endava.config.repository.ProdRepository;
-import com.endava.config.repository.QARepository;
 
 import lombok.extern.log4j.Log4j2;
 import springfox.documentation.builders.PathSelectors;
@@ -102,10 +102,10 @@ public class ConfigApplication implements CommandLineRunner {
 
 	private File getFileFromResources(String filename) throws URISyntaxException, MalformedURLException, IOException {
 
-//		 this is the path within the jar file
+		// this is the path within the jar file
 		InputStream input = ConfigApplication.class.getResourceAsStream(filename);
 		if (input == null) {
-//	     this is how we load file within editor
+			// this is how we load file within editor
 			input = ConfigApplication.class.getClassLoader().getResourceAsStream(filename);
 		}
 
