@@ -21,6 +21,9 @@
 		"users": {
 			"name": "USERS",
 			"bcrypt-hash-size": 10
+		},
+		"audit":{
+			"nottosave":["password","token","contraseña","clave"]
 		}
 	}
 }
