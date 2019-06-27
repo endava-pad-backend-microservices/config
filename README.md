@@ -1,5 +1,6 @@
 # Configuration Service
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/aeb5659b2e2448d887489a2c113b13f2)](https://www.codacy.com/app/Microservices/config?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=endava-pad-backend-microservices/config&amp;utm_campaign=Badge_Grade)
+[![Build Status](https://travis-ci.org/endava-pad-backend-microservices/config.svg?branch=master)](https://travis-ci.org/endava-pad-backend-microservices/config)
 
 This is a configuration services to serve as a server for the rest of the services inside
 the architecture.
