@@ -24,7 +24,7 @@
 		},
 		"audit":{
 			"nottosave":["password","token","contraseña","clave"]
-		}
+		},
 		"notification":{
 			"queues":["user_created","update_config"],
 			"mailConfiguration":{
