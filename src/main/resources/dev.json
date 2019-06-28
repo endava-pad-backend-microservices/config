@@ -26,7 +26,15 @@
 			"nottosave":["password","token","contraseña","clave"]
 		}
 		"notification":{
-			"queues":["user_created","update_config"]
+			"queues":["user_created","update_config"],
+			"mailConfiguration":{
+				"sender":"paranabackendendv@gmail.com",
+				"port":587,
+				"server":"smtp.gmail.com",
+				"user":"paranabackendendv@gmail.com",
+				"password":"ContrasenaNueva1",
+			},
+			"endpoints":{"user_created":"http://www.localhost:8080/api/user/validateuser?","update_config":""}
 		}
 	}
 }
