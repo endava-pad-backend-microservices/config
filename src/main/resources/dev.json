@@ -20,7 +20,8 @@
 		},
 		"users": {
 			"name": "USERS",
-			"bcrypt-hash-size": 10
+			"bcrypt-hash-size": 10,
+			"hash-expire-time": 48
 		},
 		"audit":{
 			"nottosave":["password","token","contraseña","clave"]
@@ -34,7 +35,7 @@
 				"user":"paranabackendendv@gmail.com",
 				"password":"ContrasenaNueva1",
 			},
-			"endpoints":{"user_created":"http://www.localhost:8080/api/user/validateuser?","update_config":""}
+			"endpoints":{"user_created":"http://localhost:8080/api/users/enable/","update_config":""}
 		}
 	}
 }
